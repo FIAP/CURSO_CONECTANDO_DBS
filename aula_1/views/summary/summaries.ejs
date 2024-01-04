@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resumos</title>
+</head>
+<body>
+  <h1>Resumos</h1>
+  <ul>
+    <% summaries.forEach(summary => { %>
+      <li>
+        Livro ID: <%= summary.bookId %> - <%= summary.content %>
+      </li>
+    <% }); %>
+  </ul>
+</body>
+</html>

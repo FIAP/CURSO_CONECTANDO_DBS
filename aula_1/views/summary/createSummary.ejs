@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Criar Resumo</title>
+</head>
+<body>
+  <h1>Criar Resumo</h1>
+  <form action="/summaries/create" method="post">
+    <label for="bookId">Livro:</label>
+    <select name="bookId" id="bookId">
+      <% borrowedBooks.forEach(bookId => { %>
+        <option value="<%= bookId %>">Livro ID: <%= bookId %></option>
+      <% }); %>
+    </select>
+    <br>
+    <label for="content">Conteúdo:</label>
+    <textarea name="content" id="content" cols="30" rows="10" required></textarea>
+    <br>
+    <button type="submit">Criar Resumo</button>
+  </form>
+</body>
+</html>
